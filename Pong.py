@@ -4,6 +4,17 @@ import pygame, sys, random
 def ball_animation():
 	global ball_speed_x, ball_speed_y, player_score, opponent_score
 	
+	
+	if ball_speed_x>0:
+		ball_speed_x = player_score+5
+	elif ball_speed_x < 0:
+		ball_speed_x = (player_score+5)*-1
+	
+	if ball_speed_y>0:
+		ball_speed_y = player_score+5
+	elif ball_speed_y<0:
+		ball_speed_y = (player_score+5)*-1
+		
 	ball.x += ball_speed_x
 	ball.y += ball_speed_y
 
